@@ -1,0 +1,114 @@
+<! DOCTYPE html>
+<head>
+    <title>Alicia's Aesthetic Web</title>
+    <script>
+        
+        function saludame() {
+            var nombre = document.getElementById("nombre").value;
+            alert("Hola y adios, " + nombre);
+            echame();
+        }
+
+        function echame() {
+            alert("VETEEEE!!!!!");
+            window.location.href = "https://roblox.com";
+        }
+
+        async function cuentaLimones() {
+            const lista = document.getElementById("listaLimones");
+            const numLimones = document.getElementById("limones").value;
+            console.log(numLimones);
+            for (i=0; i<numLimones; i++) {
+                const item = document.createElement("li");
+                item.innerHTML = "Y " + i + " 🍋, y medio 🍋,"
+                lista.appendChild(item);
+                await sleep(500);
+            }
+
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function showStars() {
+            let starCount = 50;
+            let space = document.querySelector("main");
+            for(let i =0 ; i<starCount; i++ ){
+                space.innerHTML +=  "<div class='star'></div>";
+                let star = document.querySelectorAll(".star")[i];
+
+                let x = Math.floor(Math.random() * window.innerWidth) -3;
+                let h = Math.random() * 100;
+                let w = Math.random() * 3;
+                let duration = Math.random() * 1;
+
+                star.style.left = x + "px";
+                star.style.animationDuration = duration + 0.1 + "s";
+                star.style.height = 50 + h +"px";
+                star.style.width = w + "px";
+            }
+        }
+
+    function showBeluga() {
+        const lista = document.getElementById("beluga");
+        const item = document.createElement("img");
+        item.src = "https://yt3.googleusercontent.com/j_WEj_bNul2rZNQOs7dVsxcnNi0GAG8hcu8TGRF-15ikEJwbqjLaxofFJoEJ9d32FcrJYxgF=s900-c-k-c0x00ffffff-no-rj";
+        lista.appendChild(item);
+    }
+
+    </script>
+    <link rel="stylesheet" media="screen" href="estilos.css">
+</head>
+<body>
+    <h1>Holi!!!!!</h1>
+    <h2>Holut 💜</h2>
+
+    <img width="400px" src="https://images.saymedia-content.com/.image/t_share/MTc3NjQ2OTc0MzIzOTkyMTcz/your-guide-to-successfully-rearing-stray-kittens.jpg"/>
+    
+    <p id="beluga"></p>
+    <button name="marea" onclick="showBeluga()">Añadir gato</button>
+
+    <br/>
+    <br/>
+
+    <input id="nombre" value="Inserta tu nombre aqui" />
+    <button name="saludame" onclick="saludame()">Click aquí bro!</button>
+
+    <br/>
+    <br/>
+
+    <ul id="listaLimones"></ul>
+    <input id="limones" type="number" value="100" />
+    <button onclick="cuentaLimones()">Cuenta limones</button>
+
+    <br/>
+    <br/>
+    <button onclick="showStars()">Ver estrellas</button>
+
+
+
+    <main >
+        <div class="rocket__container">
+            <div class="body">
+                <div class="puntica"></div>
+                <div class="window_container">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div class="window_container">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div class="bottom"></div>
+            </div>
+            <div class="wing left"></div>
+            <div class="wing right"></div>
+            <div class="fuego"></div>
+        </div>
+    </main>
+    
+</body>
+</html>
